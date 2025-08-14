@@ -1,4 +1,4 @@
-*,
+ *,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -7,6 +7,8 @@
 .page {
   min-inline-size: 360px;
   margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 p,
@@ -20,3 +22,95 @@ li,
 figure {
   margin: 0;
 }
+:root {
+  --bg-color: #F3EFEC;
+  --text-color: #312A4E;
+  --accent-color: #FFAB6B;
+  --main-font: 'Raleway', sans-serif;
+  --accent-font: 'STIX Two Text', sans-serif;
+}
+.header {
+  font-family: var(--accent-font);
+  line-height: 90%;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 10%;
+}
+.content-section {
+  padding-right: 5vi;
+  padding-left: 5vi;
+}
+.content__title , .content__card-title {
+  font-size: 30px;
+  margin-top: 7%;
+  margin-bottom: 2.5%;
+  text-align: center;
+}
+
+.header__title {
+  font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
+}
+.content__text-block .content__paragraph:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+a {
+  color: inherit;
+}
+.content__blockquote {
+  width: 70%;
+  margin-bottom: 1.5em;
+  font-family: var(--main-font);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 200%;
+  font-size: 18px;
+}
+.content__text-block .content__blockquote {
+  text-align: center;
+}
+.content__list {
+  list-style: none;
+  padding-left: 40px;
+}
+li {
+  position: relative;
+}
+ ul li:not(:last-child) {
+   margin-bottom: 10px;
+ }
+li::before {
+  content: url("../images/marker-light.svg");
+  width: 15px;
+  height: 15px;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 101%;
+}
+ .content__text-block_type_first-lettered .content__paragraph:first-child:first-letter {
+   background-color: var(--accent-color);
+   display: inline-block;
+   padding-left: 4px;
+   padding-right: 4px;
+   margin-right: 1px;
+ }
+ .content__picture {
+   width: 100%;
+ }
+ .content__figure {
+   margin-top: 7%;
+   margin-bottom: 7%;
+   width: calc(100% + 14%);
+   position: relative;
+   right: 7%
+ }
+ .content__picture-caption {
+   width: 100%;
+   height: 60px;
+   font-family: var(--main-font);
+   font-size: 18px;
+   font-weight: 400;
+   line-height: 100%;
+   border-bottom: 1px solid black;
+   text-align: center;
+   padding-top: 1.78 %;
+ }
