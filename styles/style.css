@@ -40,7 +40,7 @@ figure {
   padding-right: 5vi;
   padding-left: 5vi;
 }
-.content__title , .content__card-title {
+.content__title {
   font-size: 30px;
   margin-top: 7%;
   margin-bottom: 2.5%;
@@ -114,4 +114,37 @@ li::before {
    text-align: center;
    padding-top: 1.78%;
  }
- .
+ .content__card-title {
+   font-size: 60px;
+   line-height: 90%;
+   font-weight: 600;
+   font-family: var(--accent-font);
+ }
+ .content__card-subtitle {
+   font-size: var(--main-font);
+   line-height: 100%;
+   font-weight: 400;
+   font-size: 18px;
+ }
+.content__card {
+  margin-top: 7%;
+  outline: 1px solid currentColor;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.colored-text {
+  position: relative;
+}
+.colored-text::after {
+  content: '';
+  position: absolute;
+  width: 220px;
+  height: 0.25em;
+  background-color: var(--accent-color);
+  left: -4px;
+  top: 35px;
+  z-index: -1;
+}
