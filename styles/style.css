@@ -29,27 +29,6 @@ figure {
   --main-font: 'Raleway', sans-serif;
   --accent-font: 'STIX Two Text', sans-serif;
 }
-.theme_dark {
-  --bg-color: #171717;
-  --text-color: #B3B3B3;
-  --accent-color: transparent;
-}
- .theme_dark .content__text-block_type_first-lettered .content__paragraph:first-child:first-letter {
-   border: 1px solid currentColor;
-   font-weight: bold;
- }
- .theme_dark .content__list-items::before {
-   content: '';
-   background: url("../images/marker-dark.svg");
-   width: 15px;
-   height: 15px;
-   background-repeat: no-repeat;
-   position: absolute;
-   right: 101%;
-   }
- .theme_dark .header__theme-button {
-   background-color: transparent;
- }
 .header {
   font-family: var(--accent-font);
   line-height: 90%;
@@ -108,6 +87,7 @@ li {
   background-repeat: no-repeat;
   position: absolute;
   right: 101%;
+  top: 2px;
 }
  .content__text-block_type_first-lettered .content__paragraph:first-child:first-letter {
    background-color: var(--accent-color);
@@ -122,9 +102,9 @@ li {
  .content__figure {
    margin-top: 7%;
    margin-bottom: 7%;
-   width: calc(100% + 14%);
+   width: calc(100% + 10vi);
    position: relative;
-   right: 7%
+   right: 5vi;
  }
  .content__picture-caption {
    width: 100%;
@@ -170,6 +150,7 @@ li {
   left: -4px;
   top: 35px;
   z-index: -1;
+  white-space: nowrap;
 }
 .header__menu {
   width: 100%;
@@ -184,6 +165,7 @@ li {
   display: flex;
   flex-direction: row;
   margin: 20px;
+  padding: 0;
   list-style: none;
   width: 100%;
   justify-content: space-between;
@@ -193,6 +175,7 @@ li {
    color: currentColor;
    background-oolor: transparent;
    border: none;
+   font-size: 18px
  }
 .header__theme-button:hover {
   text-decoration: underline;
@@ -207,16 +190,6 @@ li {
    width: 4em;
    height: 0.4em;
    background-color: var(--accent-color);
-   z-index: -1;
-   top: 9px;
-   right: 5px;
- }
- .theme_dark .header__theme-button_is-active::after {
-   content: '';
-   background: url("../images/pattern.svg");
-   position: absolute;
-   width: 4em;
-   height: 0.4em;
    z-index: -1;
    top: 9px;
    right: 5px;

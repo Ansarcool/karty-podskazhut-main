@@ -1,0 +1,32 @@
+.theme_dark {
+    --bg-color: #171717;
+    --text-color: #B3B3B3;
+    --accent-color: transparent;
+}
+.theme_dark .content__text-block_type_first-lettered .content__paragraph:first-child:first-letter {
+    border: 1px solid currentColor;
+    font-weight: bold;
+}
+.theme_dark .content__list-items::before {
+    content: '';
+    background: url("../images/marker-dark.svg");
+    width: 15px;
+    height: 15px;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 101%;
+    top: 2px;
+}
+.theme_dark .header__theme-button {
+    background-color: transparent;
+}
+.theme_dark .header__theme-button_is-active::after {
+    content: '';
+    background: url("../images/pattern.svg");
+    position: absolute;
+    width: 4em;
+    height: 0.4em;
+    z-index: -1;
+    top: 9px;
+    right: 70px;
+}
